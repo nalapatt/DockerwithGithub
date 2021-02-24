@@ -12,6 +12,7 @@ jobs:
     
     - uses: actions/checkout@v2
     - name: Docker Login
+      run: |
         echo "Hello", "did this work 1"     
       
     - name: Build nodejs
