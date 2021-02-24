@@ -1,11 +1,8 @@
-FROM node:latest
+FROM node:12.4.0-alpine as debug
 MAINTAINER NEENA ALAPATT
 RUN mkdir -p /app/src
 WORKDIR /app/src
-RUN npm install
 COPY package.json .
+RUN npm install
 COPY . .
-EXPOSE 3000
-
-
-CMD ["npm", "start"]
+CMD node .
