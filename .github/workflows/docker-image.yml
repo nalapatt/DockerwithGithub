@@ -12,11 +12,11 @@ jobs:
     
     - uses: actions/checkout@v2
          
-    - name: docker build nodejs in dockerhub
+    - name: docker build image
       run: |
-        docker build ./nodejs -t ./nodejs:1.0.0     
-    - name: docker push in registry
+        docker build -t hello-docker .    
+    - name: docker run to create container
       run: |
-       docker push ./nodejs:1.0.0   
+       docker run -it -p 8080:8080 hello-docker 
        
      
