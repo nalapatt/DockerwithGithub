@@ -12,10 +12,10 @@ jobs:
     
     - uses: actions/checkout@v2
          
-    - name: docker build nodejs
+    - name: docker build nodejs in dockerhub
       run: |
         docker build ./nodejs -t ./nodejs:1.0.0     
-    - name: docker push
+    - name: docker push in registry
       run: |
        docker push ./nodejs:1.0.0   
        
