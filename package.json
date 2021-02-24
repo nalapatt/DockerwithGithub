@@ -1,19 +1,14 @@
 {
-  "name": "nalapatt",
+  "name": "ubuntu",
   "version": "1.0.0",
-  "description": "Deploying docker using github actions",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nalapatt/DockerwithGithub.git"
-  },
-  "author": "",
+  "author": "nalapatt",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nalapatt/DockerwithGithub/issues"
-  },
-  "homepage": "https://github.com/nalapatt/DockerwithGithub#readme"
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

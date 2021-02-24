@@ -1,8 +1,8 @@
-FROM node:12.4.0-alpine as debug
-MAINTAINER NEENA ALAPATT
-RUN mkdir -p /app/src
-WORKDIR /app/src
-COPY package.json .
+FROM node:latest
+WORKDIR /app
+COPY package.json /app
 RUN npm install
-COPY . .
-CMD node .
+COPY . /app
+CMD node app.js
+EXPOSE 8080
+
