@@ -11,12 +11,9 @@ jobs:
     steps:
     
     - uses: actions/checkout@v2
-    - name: Docker Login
+         
+    - name: docker build nodejs
       run: |
-        echo "Hello", "did this work 1"     
-      
-    - name: Build nodejs
-      run: |
-        echo "Hello", "did this work 2"     
+        docker build ./nodejs -t ./nodejs:1.0.0     
        
      
