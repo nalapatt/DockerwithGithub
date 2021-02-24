@@ -1,4 +1,11 @@
-FROM Ubuntu
+FROM node:latest
 MAINTAINER NEENA ALAPATT
-RUN apt-get update
-CMD ["echo", "Hello world from gitbub actions to Docker Hub"]
+RUN mkdir -p /app/src
+WORKDIR /app/src
+COPY package.json .
+RUN npm install
+COPY . .
+EXPOSE 3000
+
+
+CMD ["npm", "start"]
