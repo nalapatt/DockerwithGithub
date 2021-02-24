@@ -12,11 +12,11 @@ jobs:
     
     - uses: actions/checkout@v2
          
-    - name: docker build image
+    - name: docker build image in github actions
       run: |
         docker build -t hello-docker . 
         
-    - name: docker run to create container
+    - name: docker run to create container in github actions
       run: |
        docker run -d -p 8080:8080 hello-docker 
        
