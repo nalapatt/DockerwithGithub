@@ -19,5 +19,6 @@ jobs:
        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build nodejs
       run: |
-       docker build ./nodejs -t ./nodejs:1.0.0
+        echo "Hello", "did this work"     
+       
      
