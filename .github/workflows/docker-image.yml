@@ -14,7 +14,7 @@ jobs:
          
     - name: docker build image in github actions
       run: |
-        docker build -t hello-docker . 
+        docker build -it hello-docker . 
         
     - name: docker run to create container in github actions
       run: |
