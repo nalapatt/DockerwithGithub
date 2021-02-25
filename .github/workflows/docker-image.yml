@@ -22,7 +22,10 @@ jobs:
     
     - name: docker push to docker hub
       run: |
-       docker push hello-docker 
+       docker login -u nalapatt123
+       docker tag mylocalimage:latest nalapatt123/dockerhub:myfirstimagepush
+       docker push nalapatt123/dockerhub:myfirstimagepush 
+        
        
        
      
