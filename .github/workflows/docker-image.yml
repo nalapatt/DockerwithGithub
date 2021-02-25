@@ -7,7 +7,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    env:
+        DOCK_USER: nalapatt123
+        DOCK_PASSWORD: akaadh123
     steps:
     
     - uses: actions/checkout@v2
@@ -20,12 +22,9 @@ jobs:
       run: |
        docker run -d -p 80:80 mylocalimage 
     
-    - name: docker login
-      env:
-      DOCKER_USER: ${{ secrets.DOCKER_USER}}
-      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD}}
+    - name: docker login    
       run: |
-       docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
+       docker login -u $DOCK_USER -p $DOCK_PASSWORD 
        
     - name: docker push to docker hub
       run: |
