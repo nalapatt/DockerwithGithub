@@ -22,7 +22,6 @@ jobs:
     
     - name: docker push to docker hub
       run: |
-       
        docker tag mylocalimage:latest nalapatt123/dockerhub:myfirstimagepush
        docker push nalapatt123/dockerhub:myfirstimagepush 
         
