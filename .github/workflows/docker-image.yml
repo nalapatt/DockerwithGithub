@@ -14,11 +14,11 @@ jobs:
          
     - name: docker build image in github actions
       run: |
-        docker build -t hello-docker . 
+        docker build -t mylocalimage . 
         
     - name: docker run to create container in github actions
       run: |
-       docker run -d -p 80:80 hello-docker 
+       docker run -d -p 80:80 mylocalimage 
     
     - name: docker push to docker hub
       run: |
