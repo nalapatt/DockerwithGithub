@@ -14,7 +14,7 @@ jobs:
          
     - name: docker build image in github actions
       run: |
-        docker build -it hello-docker . 
+        docker build -t hello-docker . 
         
     - name: docker run to create container in github actions
       run: |
@@ -22,7 +22,7 @@ jobs:
     
     - name: docker push to docker hub
       run: |
-       docker login -u nalapatt123
+       
        docker tag mylocalimage:latest nalapatt123/dockerhub:myfirstimagepush
        docker push nalapatt123/dockerhub:myfirstimagepush 
         
